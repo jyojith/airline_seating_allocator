@@ -111,6 +111,10 @@ end
 lines = File.readlines('input.txt')
 
 seating = AirlineSeating.new(lines)
+if seating.booking_overflow == true
+  puts "Passenger count exceeded total seats!!"
+end
+
 puts "total number of seats = #{seating.total_seats}"
 puts "passengers count = #{seating.passengers_count}"
 
